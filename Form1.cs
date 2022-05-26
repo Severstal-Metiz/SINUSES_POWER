@@ -34,14 +34,14 @@ namespace WindowsFormsApp5
             DataPointCollection gr3 = chart1.Series["Series3"].Points;
             DataPointCollection gr4 = chart1.Series["Series4"].Points;
             fun(gr1, 2, 0, 1,Sin);
-            fun(gr2, 2, 36.9, 1,Sin);
+            fun(gr2, 2, 0, 1,Sin);
             funMul(gr3,gr1, gr2);
             //fun(gr3, 2, 0, 1, Sin);
             funDiode(gr3);
             //fun(gr3, 2, 0, 1, Sin);
             tbI.Text = Integral(gr3,gr4).ToString();
             tbM.Text = Max(gr3).ToString();
-            chart1.Series["Series1"].Enabled = false;
+            //chart1.Series["Series1"].Enabled = false;
             //chart1.Series["Series2"].Enabled = false;
 
         }
@@ -91,6 +91,14 @@ namespace WindowsFormsApp5
         }
 
         void funDiode(DataPointCollection points)
+        {
+            for (int i = 0; i < iterations; i++)
+            {
+                if (points[i].YValues[0] < 0) points[i].YValues[0] = 0;
+            }
+        }
+
+        void funMost(DataPointCollection points)
         {
             for (int i = 0; i < iterations; i++)
             {
