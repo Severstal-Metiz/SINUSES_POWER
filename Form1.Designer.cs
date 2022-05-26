@@ -39,6 +39,7 @@ namespace WindowsFormsApp5
             this.button1 = new System.Windows.Forms.Button();
             this.tbI = new System.Windows.Forms.TextBox();
             this.tbM = new System.Windows.Forms.TextBox();
+            this.tbD = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,16 +103,24 @@ namespace WindowsFormsApp5
             // 
             // tbM
             // 
-            this.tbM.Location = new System.Drawing.Point(1075, 128);
+            this.tbM.Location = new System.Drawing.Point(1075, 198);
             this.tbM.Name = "tbM";
             this.tbM.Size = new System.Drawing.Size(136, 20);
             this.tbM.TabIndex = 3;
+            // 
+            // tbD
+            // 
+            this.tbD.Location = new System.Drawing.Point(1075, 119);
+            this.tbD.Name = "tbD";
+            this.tbD.Size = new System.Drawing.Size(136, 20);
+            this.tbD.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1232, 471);
+            this.Controls.Add(this.tbD);
             this.Controls.Add(this.tbM);
             this.Controls.Add(this.tbI);
             this.Controls.Add(this.button1);
@@ -130,6 +139,7 @@ namespace WindowsFormsApp5
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox tbI;
         private System.Windows.Forms.TextBox tbM;
+        private System.Windows.Forms.TextBox tbD;
     }
 }
 
