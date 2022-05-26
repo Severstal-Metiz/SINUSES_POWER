@@ -34,13 +34,15 @@ namespace WindowsFormsApp5
             DataPointCollection gr3 = chart1.Series["Series3"].Points;
             DataPointCollection gr4 = chart1.Series["Series4"].Points;
             fun(gr1, 2, 0, 1,Sin);
-            fun(gr2, 2, 0, 1,Sin);
+            fun(gr2, 2, 36.9, 1,Sin);
             funMul(gr3,gr1, gr2);
             //fun(gr3, 2, 0, 1, Sin);
+            funDiode(gr3);
+            //fun(gr3, 2, 0, 1, Sin);
             tbI.Text = Integral(gr3,gr4).ToString();
-
+            tbM.Text = Max(gr3).ToString();
             chart1.Series["Series1"].Enabled = false;
-            chart1.Series["Series2"].Enabled = false;
+            //chart1.Series["Series2"].Enabled = false;
 
         }
 
@@ -50,9 +52,21 @@ namespace WindowsFormsApp5
             for (int i = 0; i < iterations; i++)
             {
                 res +=  dt * points[i].YValues[0];
-                resul.AddXY(i * dt, res / period);
+                if (resul != null) resul.AddXY(i * dt, res / period);
             }
             return res/period;
+        }
+
+        double Max(DataPointCollection points, DataPointCollection resul = null)
+        {
+            double res = 0;
+            for (int i = 0; i < iterations; i++)
+            {
+                //res points[i].YValues[0];
+                if (Abs(res) < Abs(points[i].YValues[0])) res = points[i].YValues[0];
+                if (resul != null) resul.AddXY(i * dt, res);
+            }
+            return res;
         }
 
         double Cnst(double _)
@@ -73,6 +87,14 @@ namespace WindowsFormsApp5
             for (int i = 0; i < iterations; i++)
             {
                 res.AddXY((double)i * dt, pointsA[i].YValues[0] * pointsB[i].YValues[0]);
+            }
+        }
+
+        void funDiode(DataPointCollection points)
+        {
+            for (int i = 0; i < iterations; i++)
+            {
+                if (points[i].YValues[0] < 0) points[i].YValues[0] = points[i].YValues[0] * -1;
             }
         }
 
