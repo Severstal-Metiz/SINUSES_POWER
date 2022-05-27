@@ -36,6 +36,7 @@ namespace WindowsFormsApp5
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button1 = new System.Windows.Forms.Button();
             this.tbI = new System.Windows.Forms.TextBox();
@@ -55,7 +56,7 @@ namespace WindowsFormsApp5
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(24, 23);
-            this.chart1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.chart1.Margin = new System.Windows.Forms.Padding(6);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series1.BorderWidth = 2;
@@ -83,11 +84,17 @@ namespace WindowsFormsApp5
             series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series5.Legend = "Legend1";
             series5.Name = "Series5";
+            series6.BorderWidth = 3;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Legend = "Legend1";
+            series6.Name = "Series6";
             this.chart1.Series.Add(series1);
             this.chart1.Series.Add(series2);
             this.chart1.Series.Add(series3);
             this.chart1.Series.Add(series4);
             this.chart1.Series.Add(series5);
+            this.chart1.Series.Add(series6);
             this.chart1.Size = new System.Drawing.Size(2416, 704);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -95,7 +102,7 @@ namespace WindowsFormsApp5
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(24, 738);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(2416, 144);
             this.button1.TabIndex = 1;
@@ -106,7 +113,7 @@ namespace WindowsFormsApp5
             // tbI
             // 
             this.tbI.Location = new System.Drawing.Point(2150, 179);
-            this.tbI.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tbI.Margin = new System.Windows.Forms.Padding(6);
             this.tbI.Name = "tbI";
             this.tbI.Size = new System.Drawing.Size(268, 31);
             this.tbI.TabIndex = 2;
@@ -114,7 +121,7 @@ namespace WindowsFormsApp5
             // tbM
             // 
             this.tbM.Location = new System.Drawing.Point(2150, 381);
-            this.tbM.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tbM.Margin = new System.Windows.Forms.Padding(6);
             this.tbM.Name = "tbM";
             this.tbM.Size = new System.Drawing.Size(268, 31);
             this.tbM.TabIndex = 3;
@@ -122,7 +129,7 @@ namespace WindowsFormsApp5
             // tbD
             // 
             this.tbD.Location = new System.Drawing.Point(2150, 229);
-            this.tbD.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tbD.Margin = new System.Windows.Forms.Padding(6);
             this.tbD.Name = "tbD";
             this.tbD.Size = new System.Drawing.Size(268, 31);
             this.tbD.TabIndex = 4;
@@ -131,13 +138,13 @@ namespace WindowsFormsApp5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2464, 906);
+            this.ClientSize = new System.Drawing.Size(2468, 906);
             this.Controls.Add(this.tbD);
             this.Controls.Add(this.tbM);
             this.Controls.Add(this.tbI);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.chart1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
