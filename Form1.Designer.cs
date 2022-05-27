@@ -35,6 +35,7 @@ namespace WindowsFormsApp5
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button1 = new System.Windows.Forms.Button();
             this.tbI = new System.Windows.Forms.TextBox();
@@ -53,7 +54,8 @@ namespace WindowsFormsApp5
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(12, 12);
+            this.chart1.Location = new System.Drawing.Point(24, 23);
+            this.chart1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series1.BorderWidth = 2;
@@ -76,19 +78,26 @@ namespace WindowsFormsApp5
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series4.Legend = "Legend1";
             series4.Name = "Series4";
+            series5.BorderWidth = 3;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Legend = "Legend1";
+            series5.Name = "Series5";
             this.chart1.Series.Add(series1);
             this.chart1.Series.Add(series2);
             this.chart1.Series.Add(series3);
             this.chart1.Series.Add(series4);
-            this.chart1.Size = new System.Drawing.Size(1208, 366);
+            this.chart1.Series.Add(series5);
+            this.chart1.Size = new System.Drawing.Size(2416, 704);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 384);
+            this.button1.Location = new System.Drawing.Point(24, 738);
+            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(1208, 75);
+            this.button1.Size = new System.Drawing.Size(2416, 144);
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -96,35 +105,39 @@ namespace WindowsFormsApp5
             // 
             // tbI
             // 
-            this.tbI.Location = new System.Drawing.Point(1075, 93);
+            this.tbI.Location = new System.Drawing.Point(2150, 179);
+            this.tbI.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tbI.Name = "tbI";
-            this.tbI.Size = new System.Drawing.Size(136, 20);
+            this.tbI.Size = new System.Drawing.Size(268, 31);
             this.tbI.TabIndex = 2;
             // 
             // tbM
             // 
-            this.tbM.Location = new System.Drawing.Point(1075, 198);
+            this.tbM.Location = new System.Drawing.Point(2150, 381);
+            this.tbM.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tbM.Name = "tbM";
-            this.tbM.Size = new System.Drawing.Size(136, 20);
+            this.tbM.Size = new System.Drawing.Size(268, 31);
             this.tbM.TabIndex = 3;
             // 
             // tbD
             // 
-            this.tbD.Location = new System.Drawing.Point(1075, 119);
+            this.tbD.Location = new System.Drawing.Point(2150, 229);
+            this.tbD.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tbD.Name = "tbD";
-            this.tbD.Size = new System.Drawing.Size(136, 20);
+            this.tbD.Size = new System.Drawing.Size(268, 31);
             this.tbD.TabIndex = 4;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1232, 471);
+            this.ClientSize = new System.Drawing.Size(2464, 906);
             this.Controls.Add(this.tbD);
             this.Controls.Add(this.tbM);
             this.Controls.Add(this.tbI);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.chart1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();

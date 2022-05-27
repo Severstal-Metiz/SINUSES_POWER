@@ -33,33 +33,42 @@ namespace WindowsFormsApp5
             DataPointCollection gr2 = chart1.Series["Series2"].Points;
             DataPointCollection gr3 = chart1.Series["Series3"].Points;
             DataPointCollection gr4 = chart1.Series["Series4"].Points;
-            fun(gr1, 2, 0, 1,Sin);
-            fun(gr2, 2, 36.9, 1,Sin);
-            funMul(gr3,gr1, gr2);
+            DataPointCollection gr5 = chart1.Series["Series5"].Points;
+            fun(gr1, 6, 0, 1,Sin);
+            fun(gr2, 3, 0, 1,Sin);
+            fun(gr3, 1, 0, 1,Sin);
+            PhaseInvertor(gr4,gr1,gr3);
+            funMul(gr5,gr4,gr2);
             //fun(gr3, 2, 0, 1, Sin);
-            funDiode(gr3);
+            //funDiode(gr3);
             //funMost(gr3);
             //fun(gr3, 2, 0, 1, Sin);
-            tbI.Text = Integral(gr3,gr4).ToString();
-            tbM.Text = Max(gr3).ToString();
-            tbD.Text = Sqrt(Integral(gr3)).ToString();
+
+
+
+            //tbI.Text = Integral(gr3,gr4).ToString();
+            //tbM.Text = Max(gr3).ToString();
+            //tbD.Text = Sqrt(Integral(gr3)).ToString();
+            
+            
             //chart1.Series["Series1"].Enabled = false;
             //chart1.Series["Series2"].Enabled = false;
+            chart1.Series["Series3"].Enabled = false;
+            //chart1.Series["Series4"].Enabled = false;
+            //chart1.Series["Series5"].Enabled = false;
 
         }
 
-        void PhaseInvertor(DataPointCollection points, DataPointCollection resul, Func<double,double> func =null)
+        void PhaseInvertor(DataPointCollection resul,DataPointCollection points, DataPointCollection pointsInvertFun)
         {
-            double res;
+            double res, f;
             for (int i = 0; i < iterations; i++)
             {
-                if (func == null) //если функции инверсии нет, то просто всё инвертируем
+                f = pointsInvertFun[i].YValues[0];
+                if (f < 0)
                 {
                     res = points[i].YValues[0] * -1;
-                }else if (func(i) < 0)
-                {
-                    res = points[i].YValues[0] * -1;
-                }else if (func(i) > 0)
+                }else if (f > 0)
                 {
                     res = points[i].YValues[0];
                 }else res = 0;
