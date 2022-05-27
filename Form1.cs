@@ -48,6 +48,29 @@ namespace WindowsFormsApp5
 
         }
 
+        void PhaseInvertor(DataPointCollection points, DataPointCollection resul, Func<double,double> func =null)
+        {
+            double res;
+            for (int i = 0; i < iterations; i++)
+            {
+                if (func == null) //если функции инверсии нет, то просто всё инвертируем
+                {
+                    res = points[i].YValues[0] * -1;
+                }else if (func(i) < 0)
+                {
+                    res = points[i].YValues[0] * -1;
+                }else if (func(i) > 0)
+                {
+                    res = points[i].YValues[0];
+                }else res = 0;
+                
+                resul.AddXY(i * dt, res);
+            }
+        }
+
+
+
+
         double Integral(DataPointCollection points, DataPointCollection resul = null)
         {
             double res=0;
