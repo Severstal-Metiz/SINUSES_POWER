@@ -35,12 +35,14 @@ namespace WindowsFormsApp5
             DataPointCollection gr4 = chart1.Series["Series4"].Points;
             DataPointCollection gr5 = chart1.Series["Series5"].Points;
             DataPointCollection gr6 = chart1.Series["Series6"].Points;
-            fun(gr1, 6, 0, 1,Sin);
-            fun(gr2, 3, 0, 1,Sin);
-            fun(gr3, 1, 0, 1,Sin);
-            PhaseInvertor(gr4,gr1,gr3);
-            funMul(gr5,gr4,gr2);
-            funMul(gr6, gr1, gr2);
+            fun(gr1, 2, 0, 311.12698372208,Sin);
+            //fun(gr2, 2, 0, 1,Sin);
+            //fun(gr5, 2, 90, 1,Sin);
+            //PhaseInvertor(gr4,gr1,gr3);
+            funMul(gr2,gr1,gr1);
+            //funMul(gr4, gr1, gr5);
+            //funMul(gr5,gr4,gr2);
+            //funMul(gr6, gr1, gr2);
             //fun(gr3, 2, 0, 1, Sin);
             //funDiode(gr3);
             //funMost(gr3);
@@ -48,17 +50,18 @@ namespace WindowsFormsApp5
 
 
 
-            //tbI.Text = Integral(gr3,gr4).ToString();
-            //tbM.Text = Max(gr3).ToString();
-            //tbD.Text = Sqrt(Integral(gr3)).ToString();
+            tbI.Text = Integral(gr2).ToString();
+            tbD.Text = Sqrt(Integral(gr2)).ToString();
+            tbM.Text = Max(gr2).ToString();
+            
 
 
-            chart1.Series["Series1"].Enabled = false;
-            chart1.Series["Series2"].Enabled = false;
-            chart1.Series["Series3"].Enabled = false;
-            chart1.Series["Series4"].Enabled = false;
-            //chart1.Series["Series5"].Enabled = false;
-            //chart1.Series["Series6"].Enabled = false;
+            //chart1.Series["Series1"].Enabled = false;
+            //chart1.Series["Series2"].Enabled = false;
+            //chart1.Series["Series3"].Enabled = false;
+            //chart1.Series["Series4"].Enabled = false;
+            chart1.Series["Series5"].Enabled = false;
+            chart1.Series["Series6"].Enabled = false;
 
         }
 
@@ -156,8 +159,7 @@ namespace WindowsFormsApp5
                 points.AddXY(x, y);
             }
         }
-       
 
-       
+    
     }
 }
