@@ -39,12 +39,9 @@ namespace WindowsFormsApp5
             System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button1 = new System.Windows.Forms.Button();
-            this.tbI = new System.Windows.Forms.TextBox();
-            this.tbM = new System.Windows.Forms.TextBox();
-            this.tbD = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.tb1 = new System.Windows.Forms.TextBox();
+            this.tb2 = new System.Windows.Forms.TextBox();
+            this.tb3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,68 +108,35 @@ namespace WindowsFormsApp5
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // tbI
+            // tb1
             // 
-            this.tbI.Location = new System.Drawing.Point(1075, 267);
-            this.tbI.Name = "tbI";
-            this.tbI.Size = new System.Drawing.Size(136, 20);
-            this.tbI.TabIndex = 2;
+            this.tb1.Location = new System.Drawing.Point(1092, 137);
+            this.tb1.Name = "tb1";
+            this.tb1.Size = new System.Drawing.Size(100, 20);
+            this.tb1.TabIndex = 2;
             // 
-            // tbM
+            // tb2
             // 
-            this.tbM.Location = new System.Drawing.Point(1075, 343);
-            this.tbM.Name = "tbM";
-            this.tbM.Size = new System.Drawing.Size(136, 20);
-            this.tbM.TabIndex = 3;
+            this.tb2.Location = new System.Drawing.Point(1092, 172);
+            this.tb2.Name = "tb2";
+            this.tb2.Size = new System.Drawing.Size(100, 20);
+            this.tb2.TabIndex = 3;
             // 
-            // tbD
+            // tb3
             // 
-            this.tbD.Location = new System.Drawing.Point(1075, 306);
-            this.tbD.Name = "tbD";
-            this.tbD.Size = new System.Drawing.Size(136, 20);
-            this.tbD.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1072, 251);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Интеграл";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1072, 290);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Корень интегралла";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1072, 327);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "MAX";
+            this.tb3.Location = new System.Drawing.Point(1092, 214);
+            this.tb3.Name = "tb3";
+            this.tb3.Size = new System.Drawing.Size(100, 20);
+            this.tb3.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1240, 478);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbD);
-            this.Controls.Add(this.tbM);
-            this.Controls.Add(this.tbI);
+            this.Controls.Add(this.tb3);
+            this.Controls.Add(this.tb2);
+            this.Controls.Add(this.tb1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.chart1);
             this.Name = "Form1";
@@ -187,12 +151,9 @@ namespace WindowsFormsApp5
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox tbI;
-        private System.Windows.Forms.TextBox tbM;
-        private System.Windows.Forms.TextBox tbD;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tb1;
+        private System.Windows.Forms.TextBox tb2;
+        private System.Windows.Forms.TextBox tb3;
     }
 }
 

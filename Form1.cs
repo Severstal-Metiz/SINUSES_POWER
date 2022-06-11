@@ -36,27 +36,14 @@ namespace WindowsFormsApp5
             DataPointCollection gr5 = chart1.Series["Series5"].Points;
             DataPointCollection gr6 = chart1.Series["Series6"].Points;
             fun(gr1, 2, 0, 1, Sin);
-            fun(gr2, 2,0, 1, Sin);
-            //funMost(gr1);
-            //funMost(gr2);
-            funMul(gr3, gr1, gr2);
-            //fun(gr5, 2, 90, 1,Sin);
-            //PhaseInvertor(gr4,gr1,gr3);
-            //funMul(gr2,gr1,gr1);
-            //funMul(gr4, gr1, gr5);
-            //funMul(gr5,gr4,gr2);
-            //funMul(gr6, gr1, gr2);
-            //fun(gr3, 2, 0, 1, Sin);
-            //funDiode(gr3);
-            //funMost(gr3);
-            //fun(gr3, 2, 0, 1, Sin);
+            funPow(gr2, gr1, 2);
+            funPow(gr3, gr1, 4);
+            CopyData(gr4, gr1);
+            funMost(gr4);
 
-
-
-            tbI.Text = Integral(gr3).ToString();
-            tbD.Text = Sqrt(Integral(gr3)).ToString();
-            tbM.Text = Max(gr3).ToString();
-            
+            tb1.Text = Integral(gr4).ToString();
+            tb2.Text = Integral(gr2).ToString();
+            tb3.Text = Integral(gr3).ToString();
 
 
             //chart1.Series["Series1"].Enabled = false;
@@ -86,7 +73,15 @@ namespace WindowsFormsApp5
             }
         }
 
-
+        void CopyData(DataPointCollection resul, DataPointCollection points)
+        {
+            double res;
+            for (int i = 0; i < iterations; i++)
+            {
+                res = points[i].YValues[0];
+                resul.AddXY(i * dt, res);
+            }
+        }
 
 
         double Integral(DataPointCollection points, DataPointCollection resul = null)
@@ -133,11 +128,27 @@ namespace WindowsFormsApp5
             }
         }
 
+        void funPow(DataPointCollection res, DataPointCollection pointsA, double pow)
+        {
+            for (int i = 0; i < iterations; i++)
+            {
+                res.AddXY((double)i * dt, Pow(pointsA[i].YValues[0],pow));
+            }
+        }
+
         void funDiode(DataPointCollection points)
         {
             for (int i = 0; i < iterations; i++)
             {
                 if (points[i].YValues[0] < 0) points[i].YValues[0] = 0;
+            }
+        }
+
+        void funDiodeMinus(DataPointCollection points)
+        {
+            for (int i = 0; i < iterations; i++)
+            {
+                if (points[i].YValues[0] > 0) points[i].YValues[0] = 0;
             }
         }
 
@@ -148,6 +159,8 @@ namespace WindowsFormsApp5
                 if (points[i].YValues[0] < 0) points[i].YValues[0] = points[i].YValues[0] * -1;
             }
         }
+
+   
 
         void fun(DataPointCollection points, double freq, double phazaG, double amplitude, Func<double,double> func)
         {
@@ -163,6 +176,6 @@ namespace WindowsFormsApp5
             }
         }
 
-    
+      
     }
 }
