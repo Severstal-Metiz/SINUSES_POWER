@@ -58,8 +58,7 @@ namespace WindowsFormsApp5
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(24, 23);
-            this.chart1.Margin = new System.Windows.Forms.Padding(6);
+            this.chart1.Location = new System.Drawing.Point(12, 12);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series1.BorderWidth = 2;
@@ -98,16 +97,15 @@ namespace WindowsFormsApp5
             this.chart1.Series.Add(series4);
             this.chart1.Series.Add(series5);
             this.chart1.Series.Add(series6);
-            this.chart1.Size = new System.Drawing.Size(2416, 704);
+            this.chart1.Size = new System.Drawing.Size(1208, 366);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(24, 738);
-            this.button1.Margin = new System.Windows.Forms.Padding(6);
+            this.button1.Location = new System.Drawing.Point(12, 384);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(2416, 144);
+            this.button1.Size = new System.Drawing.Size(1208, 75);
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -115,60 +113,60 @@ namespace WindowsFormsApp5
             // 
             // tbI
             // 
-            this.tbI.Location = new System.Drawing.Point(2150, 514);
-            this.tbI.Margin = new System.Windows.Forms.Padding(6);
+            this.tbI.Location = new System.Drawing.Point(1075, 267);
             this.tbI.Name = "tbI";
-            this.tbI.Size = new System.Drawing.Size(268, 31);
+            this.tbI.Size = new System.Drawing.Size(136, 20);
             this.tbI.TabIndex = 2;
             // 
             // tbM
             // 
-            this.tbM.Location = new System.Drawing.Point(2150, 659);
-            this.tbM.Margin = new System.Windows.Forms.Padding(6);
+            this.tbM.Location = new System.Drawing.Point(1075, 343);
             this.tbM.Name = "tbM";
-            this.tbM.Size = new System.Drawing.Size(268, 31);
+            this.tbM.Size = new System.Drawing.Size(136, 20);
             this.tbM.TabIndex = 3;
             // 
             // tbD
             // 
-            this.tbD.Location = new System.Drawing.Point(2150, 588);
-            this.tbD.Margin = new System.Windows.Forms.Padding(6);
+            this.tbD.Location = new System.Drawing.Point(1075, 306);
             this.tbD.Name = "tbD";
-            this.tbD.Size = new System.Drawing.Size(268, 31);
+            this.tbD.Size = new System.Drawing.Size(136, 20);
             this.tbD.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(2145, 483);
+            this.label1.Location = new System.Drawing.Point(1072, 251);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 25);
+            this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Интеграл";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(2145, 557);
+            this.label2.Location = new System.Drawing.Point(1072, 290);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(205, 25);
+            this.label2.Size = new System.Drawing.Size(105, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Корень интегралла";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2145, 628);
+            this.label3.Location = new System.Drawing.Point(1072, 327);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 25);
+            this.label3.Size = new System.Drawing.Size(30, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "MAX";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2460, 893);
+            this.ClientSize = new System.Drawing.Size(1240, 478);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -177,7 +175,6 @@ namespace WindowsFormsApp5
             this.Controls.Add(this.tbI);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.chart1);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
